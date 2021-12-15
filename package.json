@@ -1,0 +1,41 @@
+{
+  "name": "nextclient",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "author": "yknam",
+  "main": "public/electron.js",
+  "homepage": "./",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next build & next export",
+    "start": "next start",
+    "lint": "next lint",
+    "estart": "electron .",
+    "deploy": "electron-builder --windows nsis:ia32",
+    "concurstart": "concurrently \"cross-env BROWSER=none npm run dev\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "antd": "^4.17.3",
+    "axios": "^0.24.0",
+    "concurrently": "^6.4.0",
+    "cross-env": "^7.0.3",
+    "electron-is-dev": "^2.0.0",
+    "electron-packager": "^15.4.0",
+    "next": "12.0.7",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-emoji": "^0.5.0",
+    "react-scroll-to-bottom": "^4.2.0",
+    "socket.io-client": "^2.4.0",
+    "update-electron-app": "^2.0.1",
+    "wait-on": "^6.0.0"
+  },
+  "devDependencies": {
+    "electron": "^16.0.4",
+    "eslint": "8.4.1",
+    "eslint-config-next": "12.0.7"
+  }
+}
